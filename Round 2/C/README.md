@@ -8,66 +8,79 @@
               <div class="Section1">
                 <p class="MsoNormal" align="center" style="text-align: left">
                   <b style="mso-bidi-font-weight: normal">
-                    <span class="problem">Problem : The Vita Sum
+                    <span class="problem">Problem : Land Buy
                     </span>
                   </b>
                 </p>
                 <p class="western" align="JUSTIFY" style="line-height: 140%; margin-bottom: 0in;">
-                  Tom the cat is brushing up his Math skills. He has a bag containing N balls of different colors. Now Tom can randomly pick any even number of balls from the bag.  Tom wants to find out the sum of all such combinations of balls that he can pull out from the bag. Given he can pull out at max K balls in one pick.
+                  <b>Statement
+                  </b>
                   <br>
+                  <br>
+                  Land is divided into plots. All plots are for sale. Some plot numbers are palindromes. Our goal is to buy maximum number of palindrome plots at minimum cost. The cost in this case is measured in terms of distance between plots. Lesser the distance between plots we buy, lower the cost and vice-versa.
+                  <br>
+                  <br>
+                  Write a program to purchase plots as per given conditions
+                  <br> 
                   <br>
                 </p>
                 <p style="line-height: 140%;">
                   <b>Input Format:
-                  </b>
+                  </b> 
                   <br>
                   <br>
-                  First line contains two space separated numbers N and K
-                  <br>
-                  <br>
-                </p>
-                <p style="line-height: 140%;">
-                  <b>Output Format:
-                  </b>
-                  <br>
-                  <br>
-                  The output is the sum of all the combinations of balls he can pull out modulo 10^9+7 i.e. (1000000007)
-                  <br>
-                  <br>
-                </p>
-                <p class="western" align="JUSTIFY" style="line-height: 140%; margin-bottom: 0in;">
-                  <font face="Verdana, sans-serif">
-                    <b>Constraints:
-                    </b>
-                  </font>
-                  <br>
-                </p>
-                <p style="line-height: 140%;">
-                  <b>
-                  </b>
+                  First line contains 3 numbers delimited by comma where,
                 </p>
                 <ol>
-                  <b>
-                    <li>0&lt;=N,k&lt;=10^9
-                    </li>
-                    <li>N &gt;= k
-                    </li>
-                  </b>
+                  <li>First number is plot number of the leftmost plot
+                  </li>
+                  <li>Second number plot number of the rightmost plot
+                  </li>
+                  <li>Third number is maximum distance between plots we can buy
+                  </li>
                 </ol>
-                <b>
-                </b>
-                <p>
-                </p>
                 <br>
                 <p>
                 </p>
-                <br> 
+                <p style="line-height: 140%;">
+                  <b>Output Format:
+                  </b> 
+                  <br>
+                  <br>Print the output in below format
+                  <br>
+                  <br>
+                  Number of palindrome plots, start index of palindrome plot, end index of palindrome plot
+                  <br>OR
+                  <br>Print 0,0,0 if no purchase possible
+                  <br>
+                  <br>
+                </p>
+                <p style="line-height: 140%;">
+                  <b>Constraints:
+                  </b>
+                  <br>
+                  <br>
+                  We have 4 conditions for buying:
+                </p>
+                <ol>
+                  <li>If there are no palindrome number plots then no purchase should be made
+                  </li>
+                  <li>We need to minimize the cost
+                  </li>
+                  <li>Search for buying plots should start at the smallest plot number
+                  </li>
+                  <li>Permissible distance between two plots to be bought cannot exceed difference between left and right most plot numbers mentioned in input
+                  </li>
+                </ol>
+                <br>
+                <p>
+                </p>
                 <a>
                   <b>Sample Input and Output
                   </b>
                 </a>
                 <a>
-                  <br>
+                  <br> 
                   <br>
                   <table width="650px" border="1" cellspacing="0" cellpadding="2">
                     <tbody>
@@ -82,54 +95,44 @@
                         </th>
                       </tr>
                       <tr>
-                        <td style="width: 10px;">1
+                        <td style="width: 10px;">
+                          <br>1
+                          <br>
                         </td>
                         <td style="width: 100px;">
-                          <br>4 4
+                          <br>80,120,12
                           <br>
                         </td>
                         <td style="width: 100px">
-                          <br>8
+                          <br>2,99,101
                           <br>
                         </td>
-                        <td style="width: 300px">
-                          <br>We need 
-                          <sup>4
-                          </sup>C
-                          <sub>0
-                          </sub> + 
-                          <sup>4
-                          </sup>C
-                          <sub>2
-                          </sub>+ 
-                          <sup>4
-                          </sup>C
-                          <sub>4
-                          </sub>= 1+6+1=8 
+                        <td style="width: 350px">
+                          <br>Possible palindrome plots that satisfy constraints are
+                          <br>&lt;88,99&gt;, &lt;99, 101&gt;, &lt;101, 111&gt;
+                          <br>In all cases we are able to buy only two palindrome plots. However, the range 99 to 101 is the cheapest. 
+                          <br>
+                          Hence our answer is 2,99,101
+                          <br>
                           <br>
                         </td>
                       </tr>
                       <tr>
-                        <td style="width: 10px;">2
-                        </td>
-                        <td style="width: 100px;">
-                          <br>8 3
+                        <td style="width: 10px;">
+                          <br>2
                           <br>
                         </td>
                         <td style="width: 100px;">
-                          <br>29
+                          <br>12,20,1
                           <br>
                         </td>
-                        <td style="width: 300px">
-                          <br>We need 
-                          <sup>8
-                          </sup>C
-                          <sub>0
-                          </sub> + 
-                          <sup>8
-                          </sup>C
-                          <sub>2
-                          </sub>= 1+28=29 
+                        <td style="width: 100px">
+                          <br>0,0,0
+                          <br>
+                        </td>
+                        <td style="width: 350px">
+                          <br>Between 12 and 20 we do not have any palindromes for length of 1.
+                          <br>
                           <br>
                         </td>
                       </tr>
@@ -183,13 +186,13 @@
                     </i>
                   </p>
                   <br> 
-                  <br> 
+                  <br>
                   <p class="western" align="JUSTIFY" style="margin-bottom: 0in">
                     <br>
                   </p>
                 </div>
               </a>
-          </td>          
+            </div></td>
         </tr>
       </tbody>
     </table>

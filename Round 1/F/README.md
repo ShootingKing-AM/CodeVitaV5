@@ -9,8 +9,6 @@
                 <p class="MsoNormal" align="center" style="text-align: left">
                   <b style="mso-bidi-font-weight: normal">
                     <span class="problem">Problem : Last Digit
-                      <o:p>
-                      </o:p>
                     </span>
                   </b>
                 </p>

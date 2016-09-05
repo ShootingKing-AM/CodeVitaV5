@@ -9,7 +9,7 @@
                 <p class="MsoNormal" align="center" style="text-align:left">
                   <b style="mso-bidi-font-weight:
                             normal">
-                    <span class="problem">Problem : Checking Moves 
+                    <span class="problem">Problem : Checking Moves
                     </span>
                   </b>
                 </p>
@@ -449,7 +449,7 @@
                     </i>
                   </p>
                   <br> 
-                  <br>
+                  <br> 
                   <p class="western" align="JUSTIFY" style="margin-bottom: 0in">
                     <br>
                   </p>

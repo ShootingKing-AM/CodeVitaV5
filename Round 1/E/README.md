@@ -10,8 +10,6 @@
                   <b style="mso-bidi-font-weight:
                             normal">
                     <span class="problem">Problem : Verify JSON Object validity
-                      <o:p>
-                      </o:p>
                     </span>
                   </b>
                 </p>

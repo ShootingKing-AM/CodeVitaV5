@@ -8,12 +8,19 @@
               <div class="Section1">
                 <p class="MsoNormal" align="center" style="text-align: left">
                   <b style="mso-bidi-font-weight: normal">
-                    <span class="problem">Problem : The Vita Sum
+                    <span class="problem">Problem : Fill the Boxes
                     </span>
                   </b>
                 </p>
                 <p class="western" align="JUSTIFY" style="line-height: 140%; margin-bottom: 0in;">
-                  Tom the cat is brushing up his Math skills. He has a bag containing N balls of different colors. Now Tom can randomly pick any even number of balls from the bag.  Tom wants to find out the sum of all such combinations of balls that he can pull out from the bag. Given he can pull out at max K balls in one pick.
+                  <b>Statement
+                  </b>
+                  <br>
+                  <br>
+                  There are N horizontally adjacent boxes on a sheet. Raju has to fill them(starting from the left) by using two colors: Red and Green. If he picks up Green color, he can fill one or more adjacent boxes while if he picks up red color, he can fill only one box and after that he has to place the color back.
+                  <br>
+                  <br>
+                  It is pre-decided that which box will be filled with which color. You have to find the minimum no. of times Raju will have to place the picked up color back in order to match the given pattern. Raju can't re-arrange the position of the boxes.							
                   <br>
                   <br>
                 </p>
@@ -21,43 +28,38 @@
                   <b>Input Format:
                   </b>
                   <br>
-                  <br>
-                  First line contains two space separated numbers N and K
-                  <br>
-                  <br>
+                  <br>First line contains a Number and String delimited by whitespace where,
+                </p>
+                <ol>
+                  <li>First Number is number of boxes
+                  </li>
+                  <li>Second String is the color pattern
+                  </li>
+                </ol>
+                <br>
+                <p>
                 </p>
                 <p style="line-height: 140%;">
                   <b>Output Format:
                   </b>
                   <br>
                   <br>
-                  The output is the sum of all the combinations of balls he can pull out modulo 10^9+7 i.e. (1000000007)
+                  The minimum no. of times Raju will have to place the picked up color back in order to match the given pattern.
                   <br>
-                  <br>
-                </p>
-                <p class="western" align="JUSTIFY" style="line-height: 140%; margin-bottom: 0in;">
-                  <font face="Verdana, sans-serif">
-                    <b>Constraints:
-                    </b>
-                  </font>
                   <br>
                 </p>
                 <p style="line-height: 140%;">
-                  <b>
+                  <b>Constraints:
                   </b>
+                  <br>
+                  <br>
                 </p>
                 <ol>
-                  <b>
-                    <li>0&lt;=N,k&lt;=10^9
-                    </li>
-                    <li>N &gt;= k
-                    </li>
-                  </b>
+                  <li>If he picks up Green color, he can fill one or more adjacent boxes while if he picks up red color, he can fill only one box. 
+                  </li>
+                  <li>All the boxes will have to be filled sequentially.
+                  </li>
                 </ol>
-                <b>
-                </b>
-                <p>
-                </p>
                 <br>
                 <p>
                 </p>
@@ -82,30 +84,27 @@
                         </th>
                       </tr>
                       <tr>
-                        <td style="width: 10px;">1
+                        <td style="width: 10px;">
+                          <br>1
+                          <br>
                         </td>
                         <td style="width: 100px;">
-                          <br>4 4
+                          <br>5 RGGRR
                           <br>
                         </td>
                         <td style="width: 100px">
-                          <br>8
+                          <br>3
                           <br>
                         </td>
-                        <td style="width: 300px">
-                          <br>We need 
-                          <sup>4
-                          </sup>C
-                          <sub>0
-                          </sub> + 
-                          <sup>4
-                          </sup>C
-                          <sub>2
-                          </sub>+ 
-                          <sup>4
-                          </sup>C
-                          <sub>4
-                          </sub>= 1+6+1=8 
+                        <td style="width: 350px">
+                          <br>First Raju picked Red color for filling and next color is Green so he placed red color back so count= 1
+                          <br>
+                          Raju picked Green color and filled next two boxes with Green and placed Green color back, now count =2
+                          <br>
+                          Again Raju picked Red color and filled the box and placed it back, now count=3
+                          <br>
+                          Again Raju picked Red color filled the box and as it is last box no need to place it back, so final count=3
+                          <br>
                           <br>
                         </td>
                       </tr>
@@ -113,23 +112,18 @@
                         <td style="width: 10px;">2
                         </td>
                         <td style="width: 100px;">
-                          <br>8 3
+                          <br>5 RGGGG
                           <br>
                         </td>
                         <td style="width: 100px;">
-                          <br>29
+                          <br>1
                           <br>
                         </td>
-                        <td style="width: 300px">
-                          <br>We need 
-                          <sup>8
-                          </sup>C
-                          <sub>0
-                          </sub> + 
-                          <sup>8
-                          </sup>C
-                          <sub>2
-                          </sub>= 1+28=29 
+                        <td style="width: 350px">
+                          <br>First Raju picked R color for filling and next color is G so he placed red color back so count= 1
+                          <br>
+                          Raju picked G color filled next 4 boxes with G color, so final count =1
+                          <br>
                           <br>
                         </td>
                       </tr>
@@ -189,7 +183,7 @@
                   </p>
                 </div>
               </a>
-          </td>          
+            </div></td>
         </tr>
       </tbody>
     </table>
